@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from './Button'
 
 const HomeTwo = () => {
     return (
@@ -30,7 +31,7 @@ const HomeTwo = () => {
                 </div>
                 <p className='text-sm sm:text-lg  py-4 sm:py-2  font-semibold'>Front End Developer</p>
                 <div className='pt-6'>
-                    <button className=' hover:text-white button text-base  w-[50%] sm:w-[220px] px-2 py-2   home-font font-medium'>View More</button>
+                   <Button />
                 </div>
             </div>
 

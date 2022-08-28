@@ -1,10 +1,13 @@
 import React from 'react'
-import Map from "../assets/satvik_location.png";
 
 const Contact = () => {
   return (
-    <div className='h-screen  w-full border-l-2 border-[#af5beb] '>
-      <div className='px-4 sm:mx-6 '>
+    <>
+    <div  className='px-4 sm:px-0 sm:mx-6 '>
+        <h1 className="text-3xl text-white md:text-4xl mt-20  border-b-4 inline-block border-b-[#eb1c3e]  font-bold">Connect</h1>
+    </div>
+    <div className='h-screen w-full'>
+      <div className='px-4 sm:px-0 sm:mx-6 '>
         <h1 className="text-3xl text-white md:text-4xl mt-20  border-b-4 inline-block border-b-[#eb1c3e]  font-bold">Contact me:</h1>
         {/*   <p className="text-sm text-white sm:text-lg font-medium text-justify py-1"></p> */}
       </div>
@@ -19,7 +22,17 @@ const Contact = () => {
             </form>
           </div>
         </div>
-        {/*  <div className='sm:mt-14 w-[100%] sm:w-[50%] h-[30%] relative sm:h-[50%]'>
+      </div>
+    </div>
+    </>
+  )
+}
+
+export default Contact;
+
+
+
+{/*  <div className='sm:mt-14 w-[100%] sm:w-[50%] h-[30%] relative sm:h-[50%]'>
          <a href="https://goo.gl/maps/mSkJguE93MxdD5eg9" target="_blank" >
           <img src={Map} className="rounded" alt="Satvik Location" style={{width:"100%",height:"100%"}}></img>
           <div className='absolute bottom-2 left-2 sm:bottom-6 sm:left-6'>
@@ -28,11 +41,3 @@ const Contact = () => {
          </div>
         </a>
         </div> */}
-      </div>
-
-
-    </div>
-  )
-}
-
-export default Contact;
