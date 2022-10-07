@@ -1,29 +1,37 @@
-import React from 'react'
+import React from 'react';
+import { FaGithub, FaLinkedin, FaHandPointLeft } from "react-icons/fa";
+import { HiOutlineMail } from 'react-icons/hi';
+import { BsFillPersonLinesFill, BsFillTelephoneFill, MdOutgoingMail } from 'react-icons/bs';
 
 const Contact = () => {
   return (
     <>
-    <div  className='px-4 sm:px-0 sm:mx-6 '>
-        <h1 className="text-3xl text-white md:text-4xl mt-20  border-b-4 inline-block border-b-[#eb1c3e]  font-bold">Connect</h1>
-    </div>
-    <div className='h-screen w-full'>
-      <div className='px-4 sm:px-0 sm:mx-6 '>
-        <h1 className="text-3xl text-white md:text-4xl mt-20  border-b-4 inline-block border-b-[#eb1c3e]  font-bold">Contact me:</h1>
-        {/*   <p className="text-sm text-white sm:text-lg font-medium text-justify py-1"></p> */}
-      </div>
-      <div className='sm:flex justify-center w-[100%] h-[100%]'>
-        <div className='sm:w-[50%] mt-7 sm:mt-16'>
-          <div className="flex flex-col items-center p-2 w-[100%]">
-            <form className="w-[100%]  flex flex-col items-center">
-              <input className="w-[100%] outline-none custom-input focus:bg-cyan-400 bg-gray-300 font-bold p-2 rounded" type="text" placeholder='Name'></input>
-              <input className="w-[100%]  outline-none custom-input focus:bg-cyan-400 bg-gray-300 p-2 rounded font-bold my-4" type="email" placeholder='Email'></input>
-              <textarea className="w-[100%]  outline-none custom-input focus:bg-cyan-400 bg-gray-300 p-2 font-bold rounded" placeholder='Message' rows="10"></textarea>
-              <button className='border-2 text-white button px-8 py-2 my-4'>Send Message</button>
-            </form>
+      <div name="contact" className='w-full h-screen border-l-2 border-[#c31432] text-white animation-one'>
+        <h1 className=" mx-4 sm:px-0 sm:mx-6 text-2xl text-white md:text-4xl pt-10  border-b-4 inline-block border-b-[#eb1c3e]  font-bold">Drop Me A Line:</h1>
+        <div className='m-10 flex items-center'>
+          <p className='font-bold mr-5'>Phone -</p>
+          <div className='mx-2'>
+            <BsFillTelephoneFill />
+          </div>
+          <a className='font-mono  border-b-2 border-blue-600' href="tel: 9966774178">+919966774178</a>
+          <div className='ml-2 w-[20%] hidden lg:flex items-center '>
+            <FaHandPointLeft  /><span className='ml-1'>(Click to connect)</span>
+          </div>
+
+        </div>
+        <div className='m-10 flex items-center'>
+          <p className='font-bold mr-5'>Gmail -</p>
+          <div className='mx-2'>
+            <HiOutlineMail size={20} />
+          </div>
+          <a className='font-semibold text-xs sm:text-base   border-b-2 border-blue-600' href="mailto:ksvsatvik@gmail.com">ksvsatvik@gmail.com</a>
+          <div className='ml-2 w-[20%] hidden lg:flex items-center '>
+            <FaHandPointLeft  /><span className='ml-1'>(Click to connect)</span>
           </div>
         </div>
       </div>
-    </div>
+
+
     </>
   )
 }
@@ -41,3 +49,19 @@ export default Contact;
          </div>
         </a>
         </div> */}
+
+
+
+{/*  <div className='px-4 sm:px-0 sm:mx-6 '>
+            <h1 className="text-3xl text-white md:text-4xl pt-10  border-b-4 inline-block border-b-[#eb1c3e]  font-bold">Connect:</h1>
+          </div>
+          <div className='border-2 border-orange-600 w-[100%] h-[50%] flex justify-center'>
+              <div className='border-red-600 border-2 w-[50%] h-[100%] '>
+                  <div className='border-yellow-400 border-2 text-blue-600 hover:text-[lightgreen]'>
+                      <a href="#" ><FaLinkedin size={50} /></a>
+                  </div>
+                  <div>
+                    <a href="#" ><FaLinkedin size={50} /></a>
+                  </div>
+              </div>
+          </div> */}

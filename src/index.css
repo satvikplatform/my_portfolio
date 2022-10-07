@@ -38,6 +38,120 @@
     color: #b8243c;
 }
 
+.animation-one {
+    animation: myfirst 1s ease;
+    position: relative;
+}
+
+@keyframes myfirst {
+    from {
+        top: -200px;
+    }
+    to {
+        top: 0;
+    }
+}
+
+.animation-two {
+    animation: mysecond 1s ease;
+    position: relative;
+}
+
+@keyframes mysecond {
+    from {
+        left: -200px;
+    }
+    to {
+        left: 0;
+    }
+}
+
+.animation-three {
+    animation: mythird 1s ease;
+    position: relative;
+}
+
+@keyframes mythird {
+    from {
+        bottom: -500px;
+    }
+    to {
+        bottom: 0;
+    }
+}
+
+.animation-four {
+    animation: myfour 1s ease;
+    position: relative;
+}
+
+@keyframes myfour {
+    from {
+        right: -200px;
+    }
+    to {
+        right: 0;
+    }
+}
+
+.box {
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.box::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 250%;
+    background: linear-gradient( #ff0c35, #9d1bf9);
+    animation: logo 5s linear infinite;
+}
+
+.box::after {
+    content: "";
+    position: absolute;
+    inset: 5px;
+    border-radius: 50%;
+    background: #1d1d1d;
+}
+
+@keyframes logo {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* .animation-check {
+    animation: check 12s linear infinite;
+    background-size: 400% 400%;
+}
+
+@keyframes check {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+} */
+
+
+/* 0%   { left:0px; }
+25%  { left:200px; }
+50%  { left:200px; }
+75%  { left:0px; }
+100% { left:0px; } */
+
 .custom-input:focus {
     border-bottom: 4px;
     border-image-slice: 1;
@@ -45,6 +159,11 @@
     border-style: solid;
     transition: all 0.1s ease-out;
 }
+
+
+/* .active {
+    text-shadow: 0px 0px 10px rgb(39, 253, 245);
+} */
 
 
 /* .button {

@@ -1,8 +1,0 @@
-
-
-
-@layer base {
-    li {
-        @apply py-6;
-    }
-}

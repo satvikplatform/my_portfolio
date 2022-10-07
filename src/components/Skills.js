@@ -10,13 +10,13 @@ import Tailwind from '../assets/tailwind.png';
 
 const Skills = () => {
   return (
-    <div name="skills" className="text-white w-full h-[800px] border-blue-600 border-l-2">
-      <div className="flex flex-col justify-start sm:justify-center items-start max-w-[100%] md:max-w-[55%]  h-full">
-        <div className="px-4 sm:mx-6">
-          <h1 className="text-3xl  md:text-4xl  border-b-4 inline-block border-b-[#eb1c3e]  font-bold ">Skills:</h1>
+    <div name="skills" className="text-white w-full h-[800px] border-[#c31432] border-l-2">
+      <div className="flex flex-col justify-start items-start max-w-[100%] md:max-w-[50%]  h-full">
+        <div className="px-4 sm:mx-6 animation-one">
+          <h1 className="text-3xl  md:text-4xl  border-b-4 inline-block border-b-[#eb1c3e]  font-bold pt-14 ">Skills:</h1>
           <p className="text-sm sm:text-lg font-medium text-justify py-1">//A small gallery of my technical skills</p>
         </div>
-        <div className="flex justify-center flex-wrap">
+        <div className="flex justify-center flex-wrap animation-two">
           <div className=" flex flex-col  items-center justify-center w-20  sm:w-24 m-6 hover:scale-110 duration-300  shadow-lg shadow-gray-900">
              <img  src={HTML} alt="HTML logo" className="" style={{width: "70%"}} />
              <p className="text-xs uppercase sm:text-base py-2 font-semibold">HTML</p>
