@@ -164,7 +164,7 @@ const Navbar = () => {
                      <a className='text-sm font-semibold w-full h-full flex items-center justify-between' href="/" title='Github'><FaGithub size={20} />Github</a>
                   </li>
                   <li className="bg-blue-600 px-3 fixed top-[53.9%] right-0 opacity-80 hover:opacity-100  hover:bg-blue-900 flex justify-start items-center duration-300 w-[120px] h-[40px] mr-[-80px] hover:mr-[-10px]">
-                     <a className='text-sm font-semibold w-full h-full flex items-center justify-between' title="Linkedin" href="/"><FaFacebook size={20} />Facebook</a>
+                     <a className='text-sm font-semibold w-full h-full flex items-center justify-between' title="Facebook" href="https://www.facebook.com/satvik.karanam" target="_blank"><FaFacebook size={20} />Facebook</a>
                   </li>
                </ul>
             </div>

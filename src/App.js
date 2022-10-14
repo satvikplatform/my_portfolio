@@ -7,10 +7,22 @@ import Work from "./components/Work.js";
 import Contact from "./components/Contact.js";
 import HomeTwo from "./components/HomeTwo.js";
 import Button from "./components/Button.js";
+import { useState } from "react";
 
 
 
 function App() {
+  const name = "venu";
+  const [state, setState] =  useState({
+    message:"Hello from app"
+  })
+
+  /* const buttonMessage = () => {
+    console.log("hello");
+  } */
+
+
+  
   return (
     <>
         <BrowserRouter>

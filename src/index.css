@@ -94,6 +94,20 @@
     }
 }
 
+.animation-cover {
+    animation: cover 1s ease;
+    position: relative;
+}
+
+@keyframes cover {
+    from {
+        right: -300px;
+    }
+    to {
+        right: 0;
+    }
+}
+
 .box {
     position: relative;
     background: rgba(0, 0, 0, 0.5);

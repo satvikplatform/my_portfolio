@@ -3,7 +3,7 @@ import WebDevImg from "../assets/web-developer-vector.png";
 
 const About = () => {
   return (
-    <div name="about" class="h-screen border-[#c31432] border-l-2  w-full text-white flex flex-col sm:flex-row  items-center ">
+    <div name="about" className="h-screen border-[#c31432] border-l-2  w-full text-white flex flex-col sm:flex-row justify-center  items-center ">
       <div className='sm:w-[50%] sm:flex flex-col justify-center  px-4 h-[100%] sm:mx-6'>
         <div className='pt-10 sm:pt-0 sm:mt-0'>
           <div className='animation-two'>
@@ -24,7 +24,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className='h-[100%] 2xl:h-[70%] sm:w-[50%]  md:h-[70%] xl:h-[100%]  flex justify-center items-center'>
+      <div className='h-[100%] sm:w-[50%]  md:h-[70%] xl:h-[100%] 2xl:h-[70%] 2xl:w-[40%]  flex justify-center items-center'>
          <img className='animation-four'  src={WebDevImg} alt="vector image of a web developer" style={{width:"100%", height:"80%"}} />
       </div>
     </div>
