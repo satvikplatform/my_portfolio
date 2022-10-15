@@ -1,27 +1,17 @@
 import React, { useState } from 'react'
 import { Outlet, NavLink } from "react-router-dom";
 import { FaBars, FaTimes, FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
-import { HiOutlineMail } from 'react-icons/hi';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
 import Resume from "../assets/Dorian_Dominguez_Resume.pdf";
 
 
 
 const Navbar = () => {
    const [mobileList, setMobileList] = useState(false);
-  /*  const [state, setState] = useState({
-      main: {
-         borderBottom: "3px solid cyan",
-         color: "rgb(105, 250, 255)",
-         textShadow: "0px 0px 5px rgb(90, 255, 250)",
-      },
-   }); */
 
    const clickHandler = () => {
       setMobileList((prevState) => { return prevState === false ? true : false });
    }
   
- 
    return (
       <>
          <div className=" bg-gradient-to-r from-[#c31432] to-[#2b0c41]   text-xl sticky top-0 left-0 right-0 z-50 flex justify-between items-center w-full h-[100px]">
@@ -46,7 +36,7 @@ const Navbar = () => {
                   <NavLink  className='font-medium'  to="/Work">Work</NavLink>
                </li>
                <li>
-                  <a href={Resume} className='font-medium' target="_blank">Resume</a>
+                  <a href={Resume} className='font-medium' target="_blank" rel="noreferrer">Resume</a>
                </li>
                <li>
                   <NavLink  className='font-medium'  to="/Contact">Contact</NavLink>
@@ -73,7 +63,7 @@ const Navbar = () => {
                         <NavLink  onClick={clickHandler} to="/Work">Work</NavLink>
                      </li>
                      <li className="py-7">
-                        <a href={Resume} target="_blank">Resume</a>
+                        <a href={Resume} target="_blank" rel="noreferrer">Resume</a>
                      </li>
                      <li className="py-7">
                         <NavLink  onClick={clickHandler} to="/Contact">Contact</NavLink>
@@ -91,7 +81,7 @@ const Navbar = () => {
                      <a className='text-sm font-semibold w-full h-full flex items-center justify-between' href="/" title='Github'><FaGithub size={20} />Github</a>
                   </li>
                   <li className="bg-blue-600 px-3 fixed top-[53.9%] right-0 opacity-80 hover:opacity-100  hover:bg-blue-900 flex justify-start items-center duration-300 w-[120px] h-[40px] mr-[-80px] hover:mr-[-10px]">
-                     <a className='text-sm font-semibold w-full h-full flex items-center justify-between' title="Facebook" href="https://www.facebook.com/satvik.karanam" target="_blank"><FaFacebook size={20} />Facebook</a>
+                     <a className='text-sm font-semibold w-full h-full flex items-center justify-between' title="Facebook" href="https://www.facebook.com/satvik.karanam" target="_blank" rel="noreferrer"><FaFacebook size={20} />Facebook</a>
                   </li>
                </ul>
             </div>
@@ -102,10 +92,3 @@ const Navbar = () => {
 }
 
 export default Navbar
-
-{/* <li className="bg-[teal] hover:bg-green-800 hover:mt-[10px] duration-300   w-[40px] h-[40px] flex flex-col items-center justify-center">
-                     <a title="Email" href="/"> <HiOutlineMail size={20} /></a>
-                  </li>
-                  <li className="bg-indigo-600 hover:bg-indigo-900 hover:mt-[10px] duration-300   w-[40px] h-[40px] flex flex-col items-center justify-center">
-                     <a title="Resume" href="/"> <BsFillPersonLinesFill size={20} /></a>
-                  </li> */}

@@ -3,7 +3,6 @@ import HTML from '../assets/html.png';
 import CSS from '../assets/css.png';
 import JavaScript from '../assets/javascript.png';
 import ReactImg from '../assets/react.png';
-/* import Node from '../assets/node.png'; */
 import GitHub from '../assets/github.png';
 import Tailwind from '../assets/tailwind.png';
 import SkillsImage from "../assets/skills_image.png";
@@ -47,12 +46,10 @@ const Skills = () => {
         </div>
       </div>
       <div className=' mt-10 xl:mt-10 sm:w-[70%]  md:h-[70%] xl:h-[90%] 2xl:h-[70%] 2xl:w-[30%] xl:w-[40%] flex justify-center items-center'>
-        <img className='animation-four' src={SkillsImage} alt="vector image of a web developer" style={{ width: "100%", height: "80%" }} />
+        <img className='animation-four' src={SkillsImage} alt="of web developer" style={{ width: "100%", height: "80%" }} />
       </div>
 
     </div>
-
   )
 }
-/* 2xl:h-[70%] 2xl:w-[40%] sm:w-[50%] sm:h-[100%]  md:h-[70%] xl:h-[100%] xl:w-[50%] */
 export default Skills;

@@ -4,10 +4,6 @@ import CoverImage from '../assets/my_cover_image.png';
 
 const HomeTwo = () => {
 
-    const homeLoadHandler = () => {
-        console.log("in home handler");
-        alert("home loaded");
-    }
     return (
         <div name="homeTwo" className='text-white border-l-2 border-[#c31432] flex  w-full h-screen'>
             <div className='flex flex-col justify-start sm:justify-center h-full md:w-[50%] ml-6' >
@@ -44,7 +40,7 @@ const HomeTwo = () => {
             </div>
             <div className='hidden md:flex  w-[50%] h-[90%] flex-col md:justify-center items-center'>
                 <div className='md:w-[80%] md:h-[80%] xl:w-[65%] xl:h-[100%] animation-cover'>
-                    <img src={CoverImage} className=""  alt="satvik developer image" style={{width:"100%", height:"100%", filter:"drop-shadow(-5px -5px 5px #8d2bd3)"}} />
+                    <img src={CoverImage} className=""  alt="satvik developer" style={{width:"100%", height:"100%", filter:"drop-shadow(-5px -5px 5px #8d2bd3)"}} />
                 </div>
             </div>
 
@@ -52,4 +48,4 @@ const HomeTwo = () => {
     )
 }
 
-export default HomeTwo
+export default HomeTwo;
