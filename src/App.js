@@ -21,8 +21,6 @@ function App() {
     console.log("hello");
   } */
 
-
-  
   return (
     <>
         <BrowserRouter>

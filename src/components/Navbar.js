@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, NavLink } from "react-router-dom";
 import { FaBars, FaTimes, FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
@@ -9,80 +9,19 @@ import Resume from "../assets/Dorian_Dominguez_Resume.pdf";
 
 const Navbar = () => {
    const [mobileList, setMobileList] = useState(false);
-   const [state, setState] = useState({
+  /*  const [state, setState] = useState({
       main: {
          borderBottom: "3px solid cyan",
          color: "rgb(105, 250, 255)",
          textShadow: "0px 0px 5px rgb(90, 255, 250)",
       },
-      about: {
-         borderBottom: "",
-         color: "",
-         textShadow: "",
-      },
-      skills: {
-         borderBottom: "",
-         color: "",
-         textShadow: "",
-      },
-      work: {
-         borderBottom: "",
-         color: "",
-         textShadow: "",
-      },
-      contact: {
-         borderBottom: "",
-         color: "",
-         textShadow: "",
-      },
-   });
+   }); */
 
    const clickHandler = () => {
       setMobileList((prevState) => { return prevState === false ? true : false });
    }
-   const homeHandler = () => {
-      setState(() => { return { about: {}, skills: {}, work: {}, contact: {}, main: { borderBottom: "3px solid cyan", color: "rgb(105, 250, 255)", textShadow: "0px 0px 5px rgb(90, 255, 250)" } } });
-   }
-   const aboutHandler = () => {
-      setState(() => {
-         return {
-            main: {}, skills: {}, work: {}, contact: {}, about: {
-               borderBottom: "3px solid cyan", color: "rgb(105, 250, 255)",
-               textShadow: "0px 0px 5px rgb(90, 255, 250)"
-            }
-         }
-      });
-   }
-   const skillsHandler = () => {
-      setState(() => {
-         return {
-            main: {}, about: {}, work: {}, contact: {}, skills: {
-               borderBottom: "3px solid cyan", color: "rgb(105, 250, 255)",
-               textShadow: "0px 0px 5px rgb(90, 255, 250)"
-            }
-         }
-      });
-   }
-   const workHandler = () => {
-      setState(() => {
-         return {
-            main: {}, about: {}, skills: {}, contact: {}, work: {
-               borderBottom: "3px solid cyan", color: "rgb(105, 250, 255)",
-               textShadow: "0px 0px 5px rgb(90, 255, 250)"
-            }
-         }
-      });
-   }
-   const contactHandler = () => {
-      setState(() => {
-         return {
-            main: {}, about: {}, skills: {}, work: {}, contact: {
-               borderBottom: "3px solid cyan", color: "rgb(105, 250, 255)",
-               textShadow: "0px 0px 5px rgb(90, 255, 250)"
-            }
-         }
-      });
-   }
+  
+ 
    return (
       <>
          <div className=" bg-gradient-to-r from-[#c31432] to-[#2b0c41]   text-xl sticky top-0 left-0 right-0 z-50 flex justify-between items-center w-full h-[100px]">
@@ -95,22 +34,22 @@ const Navbar = () => {
 
             <ul className="hidden md:flex text-gray-200">
                <li>
-                  <Link onClick={homeHandler} className='font-medium' style={state.main} to="/">Home</Link>
+                  <NavLink  className='font-medium'  to="/">Home</NavLink>
                </li>
                <li>
-                  <Link onClick={aboutHandler} className='font-medium' style={{ borderBottom: state.about.borderBottom, color: state.about.color, textShadow: state.about.textShadow }} to="/About">About</Link>
+                  <NavLink  className='font-medium'  to="/About">About</NavLink>
                </li>
                <li>
-                  <Link onClick={skillsHandler} className='font-medium' style={{ borderBottom: state.skills.borderBottom, color: state.skills.color, textShadow: state.skills.textShadow }} to="/Skills">Skills</Link>
+                  <NavLink  className='font-medium'  to="/Skills">Skills</NavLink>
                </li>
                <li>
-                  <Link onClick={workHandler} className='font-medium' style={{ borderBottom: state.work.borderBottom, color: state.work.color, textShadow: state.work.textShadow }} to="/Work">Work</Link>
+                  <NavLink  className='font-medium'  to="/Work">Work</NavLink>
                </li>
                <li>
                   <a href={Resume} className='font-medium' target="_blank">Resume</a>
                </li>
                <li>
-                  <Link onClick={contactHandler} className='font-medium' style={{ borderBottom: state.contact.borderBottom, color: state.contact.color, textShadow: state.contact.textShadow }} to="/Contact">Contact</Link>
+                  <NavLink  className='font-medium'  to="/Contact">Contact</NavLink>
                </li>
             </ul>
             {/*Hamburger */}
@@ -122,34 +61,22 @@ const Navbar = () => {
                <div className="text-white bg-gradient-to-t from-[#c31432] to-[#2b0c41]  w-48 h-screen  font-semibold text-sm absolute top-[100px] right-0 md:hidden">
                   <ul className="flex flex-col items-center h-screen">
                      <li className="py-7">
-                        <Link style={state.main} onClick={() => { clickHandler(); homeHandler(); }} to="/">Home</Link>
+                        <NavLink  onClick={clickHandler} to="/">Home</NavLink>
                      </li>
                      <li className="py-7">
-                        <Link style={{
-                           borderBottom: state.about.borderBottom, color: state.about.color,
-                           textShadow: state.about.textShadow
-                        }} onClick={() => { clickHandler(); aboutHandler(); }} to="/About">About</Link>
+                        <NavLink onClick={clickHandler} to="/About">About</NavLink>
                      </li>
                      <li className="py-7">
-                        <Link style={{
-                           borderBottom: state.skills.borderBottom, color: state.skills.color,
-                           textShadow: state.skills.textShadow
-                        }} onClick={() => { clickHandler(); skillsHandler(); }} to="/Skills">Skills</Link>
+                        <NavLink onClick={clickHandler} to="/Skills">Skills</NavLink>
                      </li>
                      <li className="py-7">
-                        <Link style={{
-                           borderBottom: state.work.borderBottom, color: state.work.color,
-                           textShadow: state.work.textShadow
-                        }} onClick={() => { clickHandler(); workHandler(); }} to="/Work">Work</Link>
+                        <NavLink  onClick={clickHandler} to="/Work">Work</NavLink>
                      </li>
                      <li className="py-7">
                         <a href={Resume} target="_blank">Resume</a>
                      </li>
                      <li className="py-7">
-                        <Link style={{
-                           borderBottom: state.contact.borderBottom, color: state.contact.color,
-                           textShadow: state.contact.textShadow
-                        }} onClick={() => { clickHandler(); contactHandler(); }} to="/Contact">Contact</Link>
+                        <NavLink  onClick={clickHandler} to="/Contact">Contact</NavLink>
                      </li>
                   </ul>
                </div>

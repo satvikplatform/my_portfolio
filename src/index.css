@@ -12,6 +12,12 @@
     }
 }
 
+.active {
+    border-bottom: 3px solid cyan;
+    color: rgb(105, 250, 255);
+    text-shadow: 0px 0px 5px rgb(90, 255, 250);
+}
+
 .custom-div {
     background-repeat: no-repeat;
     background-size: cover;
